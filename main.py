@@ -45,10 +45,10 @@ with open("input.txt") as f:
     input_lines_from_file = []
     for count, line in enumerate(f):
         input_lines_from_file.append(line)
-    assigned_list = prepare_list_of_tasks_assigned_to_processors(input_lines_from_file)
-    procA, procB, procC = split_list_to_processors(assigned_list)
-    max_element = max(len(procA), len(procB), len(procC))
-    procA = add_missing_values(procA, max_element)
-    procB = add_missing_values(procB, max_element)
-    procC = add_missing_values(procC, max_element)
-    print_table(procA, procB, procC)
+assigned_list = prepare_list_of_tasks_assigned_to_processors(input_lines_from_file)
+procA, procB, procC = split_list_to_processors(assigned_list)
+max_element = max(len(procA), len(procB), len(procC))
+procA = add_missing_values(procA, max_element)
+procB = add_missing_values(procB, max_element)
+procC = add_missing_values(procC, max_element)
+print_table(procA, procB, procC)
